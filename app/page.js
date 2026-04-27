@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://lpftxjperpbppplareiu.supabase.co";
-const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxwZnR4anBlcnBicHBwbGFyZWl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMzE2MDMsImV4cCI6MjA5MjgwNzYwM30.05SpoNvmrRsD3l4xFSUI3KO7DoaWkB0kXQ1e7nFjXT4";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://lpftxjperpbppplereiu.supabase.co";
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "sb_publishable_Pz9Vl5GaocSNYyd_1RgQLQ_sXXE7_Vf
 const REQUEST_TIMEOUT_MS = 12000;
 
 async function supabaseFetch(url, options = {}) {
