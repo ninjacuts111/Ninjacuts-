@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://lpftxjperpbppplereiu.supabase.co";
-const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "sb_publishable_Pz9Vl5GaocSNYyd_1RgQLQ_sXXE7_Vf
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "sb_publishable_Pz9Vl5GaocSNYyd_1RgQLQ_sXXE7_Vf"
 const REQUEST_TIMEOUT_MS = 12000;
 
 async function supabaseFetch(url, options = {}) {
