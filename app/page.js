@@ -176,11 +176,26 @@ function LoginScreen({ employees, adminPassword, onLogin }) {
   const [selected, setSelected] = useState(null);
 
   const tryLogin = () => {
-    if (pin === adminPassword) { onLogin("manager", null); return; }
-    const emp = employees.find(e => e.pin === pin);
-    if (emp) { onLogin("employee", emp); return; }
-    setError("Fel PIN, försök igen");
-    setPin("");
+  if (selected === "manager") {
+    if (pin === MANAGER_PIN) {
+      onLogin("manager", null);
+    } else {
+      setError("Fel PIN");
+    }
+    return;
+  }
+
+  if (!selected) {
+    setError("Välj profil först");
+    return;
+  }
+
+  if (selected.pin === pin) {
+    onLogin("employee", selected);
+  } else {
+    setError("Fel PIN");
+  }
+};
   };
 
   return (
